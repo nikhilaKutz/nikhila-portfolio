@@ -10,6 +10,15 @@ import { CommonModule } from '@angular/common';
 })
 export class Header {
   isSticky = false;
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
 
   @HostListener('window:scroll', [])
   onScroll(): void {

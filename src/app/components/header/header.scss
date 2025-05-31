@@ -1,58 +1,64 @@
-@use '../../../styles.scss' as *;
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem 2rem;
-  background-color: var(--bg-color);
-  color: var(--text-color);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  background-color: var(--bg-color);
   z-index: 1000;
 
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--text-color);
   }
 
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text-color);
   }
 
   .nav-links {
     display: flex;
     gap: 1.5rem;
     list-style: none;
-    padding: 0;
-    margin: 0;
 
-    a {
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: 500;
-      &:hover {
-        color: $accent-color;
+    li {
+      a {
+        color: var(--text-color);
+        text-decoration: none;
       }
     }
-  }
 
-  .theme-btn {
-    i {
-      font-size: 1.3rem;
-      color: $accent-color;
-      cursor: pointer;
+    app-theme-toggle {
+      margin-left: 1rem;
     }
   }
 
   @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
     .nav-links {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: var(--bg-color);
+      flex-direction: column;
+      padding: 1rem 2rem;
       display: none;
+
+      &.open {
+        display: flex;
+      }
+
+      li {
+        margin: 0.5rem 0;
+      }
     }
   }
 }
-
