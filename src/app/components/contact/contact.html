@@ -1,0 +1,31 @@
+<section class="contact" @fadeIn id="contact">
+  <h2>Contact Me</h2>
+
+  <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)">
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Full Name"
+      [(ngModel)]="contactData.name"
+      required />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      [(ngModel)]="contactData.email"
+      required />
+
+    <textarea
+      name="message"
+      rows="5"
+      placeholder="Your Message"
+      [(ngModel)]="contactData.message"
+      required></textarea>
+
+    <button type="submit" [disabled]="!contactForm.valid">Send Message</button>
+  </form>
+
+  <p *ngIf="submitted" class="thank-you">Thank you! Your message has been sent.</p>
+</section>
+

@@ -1,0 +1,23 @@
+.theme-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid currentColor;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  @media (max-width: 600px) {
+    top: 4.5rem; // Move below nav on mobile
+    right: 1rem;
+  }
+}

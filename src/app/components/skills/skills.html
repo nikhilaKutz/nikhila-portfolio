@@ -1,0 +1,10 @@
+<section class="skills" @fadeIn id="skills">
+  <h2>My Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card" *ngFor="let skill of skills">
+      <i [ngClass]="skill.icon" [style.color]="skill.color"></i>
+      <p>{{ skill.name }}</p>
+    </div>
+  </div>
+</section>

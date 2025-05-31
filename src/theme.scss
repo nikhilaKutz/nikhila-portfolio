@@ -1,0 +1,33 @@
+body {
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.dark-theme {
+  --accent-color: #00BCD4;
+  --accent-color-hover: #0097a7;
+  --text-color: #e0e0e0;
+  --card-bg: #1e1e1e;
+  background-color: #121212;
+  color: var(--text-color);
+
+  .card {
+    background-color: var(--card-bg);
+  }
+}
+
+.light-theme {
+  --accent-color: #00BCD4;
+  --accent-color-hover: #0097a7;
+  --text-color: #222;
+  --card-bg: #fff;
+  background-color: #f4f4f4;
+  color: var(--text-color);
+
+  .card {
+    background-color: var(--card-bg);
+  }
+}
+
+

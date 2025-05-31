@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+// src/styles/themes.scss
+
+$background-color: #121212;
+$text-color: #E0E0E0;
+$accent-color: #00BCD4;
+$card-bg-color: #1E1E1E;
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.card {
+  background-color: $card-bg-color;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.2);
+  margin-bottom: 1rem;
+}
